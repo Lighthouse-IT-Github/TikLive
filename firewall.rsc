@@ -9,20 +9,6 @@ set disable-ipv6=yes max-neighbor-entries=8192
 /interface ovpn-server server
 set auth=sha1,md5
 /ip firewall address-list
-add address=0.0.0.0/8 comment="Local only" list=not_in_internet
-add address=172.16.0.0/12 list=not_in_internet
-add address=192.168.0.0/16 list=not_in_internet
-add address=10.0.0.0/8 list=not_in_internet
-add address=169.254.0.0/16 list=not_in_internet
-add address=127.0.0.0/8 list=not_in_internet
-add address=224.0.0.0/4 list=not_in_internet
-add address=198.18.0.0/15 list=not_in_internet
-add address=192.0.0.0/24 list=not_in_internet
-add address=192.0.2.0/24 list=not_in_internet
-add address=198.51.100.0/24 list=not_in_internet
-add address=203.0.113.0/24 list=not_in_internet
-add address=100.64.0.0/10 list=not_in_internet
-add address=240.0.0.0/4 list=not_in_internet
 add address=104.20.209.20 list=pastebin
 add address=104.20.208.21 list=pastebin
 add address=pastebin.com list=pastebin
