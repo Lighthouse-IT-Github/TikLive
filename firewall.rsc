@@ -2,10 +2,8 @@
 set enabled=yes udp-stream-timeout=30m udp-timeout=3m
 /ip neighbor discovery-settings
 set discover-interface-list=!WAN
-/ip settings
-set max-neighbor-entries=8192
 /ipv6 settings
-set disable-ipv6=yes max-neighbor-entries=8192
+set disable-ipv6=yes
 /interface ovpn-server server
 set auth=sha1,md5
 /ip firewall address-list
