@@ -1,8 +1,5 @@
 /interface bridge
 add name=bridge-local
-/interface ethernet
-set [ find default-name=ether1 ] name=ether1-gateway
-set [ find default-name=ether10 ] name=ether10-Failover
 /interface list
 add name=WAN
 add name=LAN
@@ -19,6 +16,9 @@ add bridge=bridge-local ingress-filtering=no interface=ether8
 add bridge=bridge-local ingress-filtering=no interface=ether9
 add bridge=bridge-local ingress-filtering=no interface=ether10
 add bridge=bridge-local ingress-filtering=no interface=sfp-sfpplus1
+/interface ethernet
+set [ find default-name=ether1 ] name=ether1-gateway
+set [ find default-name=ether10 ] name=ether10-Failover
 /interface list member
 add interface=ether1-gateway list=WAN
 add interface=bridge-local list=LAN
