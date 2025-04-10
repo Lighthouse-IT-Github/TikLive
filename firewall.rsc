@@ -22,7 +22,6 @@ add action=drop chain=input comment="Drop Inbound Commonly Attacked Ports" disab
 add action=drop chain=input disabled=yes dst-port=69,111,135,137-139,161-162,445,514,2049,12345-12346,20034,3133 in-interface-list=WAN protocol=udp src-address-list=!LAN
 add action=drop chain=forward disabled=yes dst-port=69,111,135,137-139,161-162,445,514,2049,12345-12346,20034,3133 in-interface-list=WAN protocol=tcp src-address-list=!LAN
 add action=drop chain=forward disabled=yes dst-port=69,111,135,137-139,161-162,445,514,2049,12345-12346,20034,3133 in-interface-list=WAN protocol=udp src-address-list=!LAN
-add action=drop chain=input comment="Drop Private IPs from WAN - Anti Spoofing" disabled=yes dst-address-list=AntiSpoof in-interface-list=WAN src-address-list=!LAN
 add action=drop chain=forward comment="Drop Outbound Tor Node" disabled=yes dst-address-list=TorNode out-interface-list=WAN
 add action=drop chain=forward comment="Drop Outbound Pastebin" disabled=yes dst-address-list=pastebin out-interface-list=WAN
 add action=drop chain=forward comment="Drop Outbound Malware" disabled=yes dst-address-list=Malware out-interface-list=WAN
