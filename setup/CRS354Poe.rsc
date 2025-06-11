@@ -1,5 +1,5 @@
 /interface bridge
-add auto-mac=yes name=bridge-local-local
+add auto-mac=yes name=bridge-local
 /interface bridge port
 add bridge=bridge-local interface=ether1
 add bridge=bridge-local interface=ether2
