@@ -1,0 +1,71 @@
+/interface bridge
+add auto-mac=yes name=bridge-local
+/interface bridge port
+add bridge=bridge-local interface=ether1
+add bridge=bridge-local interface=ether2
+add bridge=bridge-local interface=ether3
+add bridge=bridge-local interface=ether4
+add bridge=bridge-local interface=ether5
+add bridge=bridge-local interface=ether6
+add bridge=bridge-local interface=ether7
+add bridge=bridge-local interface=ether8
+add bridge=bridge-local interface=ether9
+add bridge=bridge-local interface=ether10
+add bridge=bridge-local interface=ether11
+add bridge=bridge-local interface=ether12
+add bridge=bridge-local interface=ether13
+add bridge=bridge-local interface=ether14
+add bridge=bridge-local interface=ether15
+add bridge=bridge-local interface=ether16
+add bridge=bridge-local interface=ether17
+add bridge=bridge-local interface=ether18
+add bridge=bridge-local interface=ether19
+add bridge=bridge-local interface=ether20
+add bridge=bridge-local interface=ether21
+add bridge=bridge-local interface=ether22
+add bridge=bridge-local interface=ether23
+add bridge=bridge-local interface=ether24
+add bridge=bridge-local interface=sfp-sfpplus1
+add bridge=bridge-local interface=sfp-sfpplus2
+add bridge=bridge-local interface=sfp-sfpplus3
+add bridge=bridge-local interface=sfp-sfpplus4
+/interface ethernet
+set [ find default-name=ether1 ] loop-protect=on
+set [ find default-name=ether2 ] loop-protect=on
+set [ find default-name=ether3 ] loop-protect=on
+set [ find default-name=ether4 ] loop-protect=on
+set [ find default-name=ether5 ] loop-protect=on
+set [ find default-name=ether6 ] loop-protect=on
+set [ find default-name=ether7 ] loop-protect=on
+set [ find default-name=ether8 ] loop-protect=on
+set [ find default-name=ether9 ] loop-protect=on
+set [ find default-name=ether10 ] loop-protect=on
+set [ find default-name=ether11 ] loop-protect=on
+set [ find default-name=ether12 ] loop-protect=on
+set [ find default-name=ether13 ] loop-protect=on
+set [ find default-name=ether14 ] loop-protect=on
+set [ find default-name=ether15 ] loop-protect=on
+set [ find default-name=ether16 ] loop-protect=on
+set [ find default-name=ether17 ] loop-protect=on
+set [ find default-name=ether18 ] loop-protect=on
+set [ find default-name=ether19 ] loop-protect=on
+set [ find default-name=ether20 ] loop-protect=on
+set [ find default-name=ether21 ] loop-protect=on
+set [ find default-name=ether22 ] loop-protect=on
+set [ find default-name=ether23 ] loop-protect=on
+set [ find default-name=ether24 ] loop-protect=on
+/ip dns
+set servers=1.1.1.1,8.8.8.8
+/system clock
+set time-zone-name=America/Chicago
+/system logging
+set 0 action=Info
+set 1 action=Error
+set 2 action=Warning
+set 3 action=Critical
+/system logging action
+set 1 disk-file-count=30
+add disk-file-count=20 disk-file-name=ErrorLog name=Error target=disk
+add disk-file-count=10 disk-file-name=CriticalLog name=Critical target=disk
+add disk-file-count=10 disk-file-name=WarningLog name=Warning target=disk
+add disk-file-count=10 disk-file-name=Infolog name=Info target=disk
