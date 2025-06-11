@@ -116,7 +116,7 @@ set servers=1.1.1.1,8.8.8.8
 set time-zone-name=America/Chicago
 /system logging
 set 0 action=Info
-set 1 action=Error topics=error,!ipsec
+set 1 action=Error
 set 2 action=Warning
 set 3 action=Critical
 /system logging action
