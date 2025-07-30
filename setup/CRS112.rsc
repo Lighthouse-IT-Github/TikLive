@@ -9,10 +9,10 @@ add bridge=bridge-local interface=ether5
 add bridge=bridge-local interface=ether6
 add bridge=bridge-local interface=ether7
 add bridge=bridge-local interface=ether8
-add bridge=bridge-local interface=sfp-sfp9
-add bridge=bridge-local interface=sfp-sfp10
-add bridge=bridge-local interface=sfp-sfp11
-add bridge=bridge-local interface=sfp-sfp12
+add bridge=bridge-local interface=sfp9
+add bridge=bridge-local interface=sfp10
+add bridge=bridge-local interface=sfp11
+add bridge=bridge-local interface=sfp12
 /interface ethernet
 set [ find default-name=ether1 ] loop-protect=on
 set [ find default-name=ether2 ] loop-protect=on
