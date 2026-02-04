@@ -58,14 +58,14 @@ set [ find default-name=ether24 ] loop-protect=on
 set servers=1.1.1.1,8.8.8.8
 /system clock
 set time-zone-name=America/Chicago
+/system logging action
+set 1 disk-file-count=30
+add disk-file-count=20 disk-file-name=ErrorLog name=Error target=disk
+add disk-file-count=10 disk-file-name=WarningLog name=Warning target=disk
+add disk-file-count=10 disk-file-name=Infolog name=Info target=disk
+add disk-file-count=10 disk-file-name=CriticalLog name=Critical target=disk
 /system logging
 set 0 action=Info
 set 1 action=Error
 set 2 action=Warning
 set 3 action=Critical
-/system logging action
-set 1 disk-file-count=30
-add disk-file-count=20 disk-file-name=ErrorLog name=Error target=disk
-add disk-file-count=10 disk-file-name=CriticalLog name=Critical target=disk
-add disk-file-count=10 disk-file-name=WarningLog name=Warning target=disk
-add disk-file-count=10 disk-file-name=Infolog name=Info target=disk
